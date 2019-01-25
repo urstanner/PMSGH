@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - booking engine</title>
+    <link rel="stylesheet" href="~/css/responsive.css" />
+    <link href="~/css/table.css" rel="stylesheet" />
+</head>
+<body>
+    <main>
+        <nav class="navbar">
+            <p>
+                <a asp-controller="Resources" asp-action="Index">Resources</a>
+           </p>
+            <p>
+                <a asp-controller="Bookings" asp-action="Index">Bookings</a>
+            <p/>
+            <p>
+                <a asp-controller="Shop" asp-action="Index">Booking engine</a>
+            </p>
+        </nav>
+        <aside class="sidebar_left">
+            Sidebar left
+        </aside>
+        <div class="main_content">
+            @RenderBody()
+            
+        </div>
+        <aside class="sidebar_right">
+            @RenderSection("Sidebar_right", false)
+        </aside>
+        <footer class="footer">
+            <p>&copy; 2018 - Booking Engine</p>
+        </footer>
+    </main>
+
+
+
+
+
+</body>
+</html>
